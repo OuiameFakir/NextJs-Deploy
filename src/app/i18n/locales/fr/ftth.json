@@ -1,0 +1,9 @@
+{
+  "EligHeaderTitle": "Test d'éligibilité fibre",
+  "EligHeaderSubtitle": "Vérifiez si la fibre est disponible chez vous !",
+  "SearchTitle": "Cherchez une adresse ou un lieu proche de vous :",
+  "SearchLabel": "Saisir une adresse, rue, boulevard ...",
+  "SearchButtonTitle": " Localisation automatique",
+  "SearchOU": "OU",
+  "NoSearchResult":"Pas de Résultat"
+}

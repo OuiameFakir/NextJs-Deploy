@@ -1,0 +1,9 @@
+export { default as wifi } from "./WifiHigh.svg";
+export { default as sms } from "./ChatCenteredDots.svg";
+export { default as mobile } from "./DeviceMobileSpeaker.svg";
+export { default as checked } from "./Checked.svg";
+export { default as agenda } from "./Agenda.svg";
+export { default as equipement } from "./Eqipement.svg";
+export { default as satisfaction } from "./Satifaction.svg";
+export { default as share } from "./Share.svg";
+export { default as pin } from "./Pin.svg";

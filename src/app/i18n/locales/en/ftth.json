@@ -1,0 +1,9 @@
+{
+  "EligHeaderTitle": "Fiber eligibility test",
+  "EligHeaderSubtitle": "Check if fiber is available where you live!",
+  "SearchTitle": "Search for an address or location near you:",
+  "SearchLabel": "Enter an address, street, boulevard...",
+  "SearchButtonTitle": "Automatic location",
+  "SearchOU": "OR",
+  "NoSearchResult":"No Location"
+}
