@@ -18,7 +18,7 @@ async function Mobile({ params: { lng } }: { params: { lng: string } }) {
   return (
     <PageContainer>
       <span>
-        <Switcher path="/mobile" />
+        <Switcher path="/prod/boutique/mobile" />
       </span>
       <Back lng={lng} />
 

@@ -44,7 +44,7 @@ function Elig({ params: { lng } }: { params: { lng: string } }) {
   return (
     <PageContainer>
       <span>
-        <Switcher path="/mobile/elig" />
+        <Switcher path="/prod/boutique/mobile/elig" />
       </span>
       <Back lng={lng} />
       <BodyContainerElig>
