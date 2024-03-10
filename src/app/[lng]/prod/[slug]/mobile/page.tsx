@@ -11,6 +11,7 @@ import PageContainer from "../../../../../../components/PageContainer";
 import PageHeader from "../../../../../../components/pageHeader";
 import BodyContainer from "../../../../../../components/BodyContainer";
 import PackageCard from "../../../../../../components/PackageCard";
+import Link from "next/link";
 
 async function Mobile({ params: { lng } }: { params: { lng: string } }) {
   const { t } = await useTranslation(lng, "mobile");
@@ -36,6 +37,7 @@ async function Mobile({ params: { lng } }: { params: { lng: string } }) {
           // )
         )}
       </BodyContainer>
+      <Link href="/prod/boutique/mobile/elig">Eligibility</Link>
     </PageContainer>
   );
 }
