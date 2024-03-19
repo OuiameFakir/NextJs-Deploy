@@ -6,7 +6,6 @@ import { useMemo, useState } from "react";
 import { useTranslation } from "@/app/i18n/client";
 
 import { Libraries, useLoadScript } from "@react-google-maps/api";
-import PageContainer from "../../../../../../../components/PageContainer";
 import Switcher from "@/app/[lng]/components/Swithcher/Switcher";
 import Back from "../../../../../../../components/Back/Back";
 import {
@@ -25,6 +24,10 @@ import {
 import PlacesAutoComplete from "../../../../../../../components/Map/autoComplete";
 import { PrimaryButton } from "../../../../../../../components/Button/Button";
 import IconHolder from "../../../../../../../components/Icons/icon";
+import {
+  BoxLng,
+  PageContainer,
+} from "../../../../../../../components/PageContainer.style";
 
 function Elig({ params: { lng } }: { params: { lng: string } }) {
   const { t } = useTranslation(lng, "ftth");
@@ -42,49 +45,53 @@ function Elig({ params: { lng } }: { params: { lng: string } }) {
     setIsLocation(true);
   };
   return (
-    <PageContainer>
-      <span>
-        <Switcher path="/prod/boutique/mobile/elig" />
-      </span>
-      <Back lng={lng} />
-      <BodyContainerElig>
-        <TiltlesCentred
-          title={t("EligHeaderTitle")}
-          subtitle={t("EligHeaderSubtitle")}
-        />
-        <SearchContainer>
-          <SeachTitle>{t("SearchTitle")}</SeachTitle>
-          <SeachLabelContiner>
-            <AutoCompleteContainer>
-              <PlacesAutoComplete
-                lng={lng}
-                onSelectPlace={(place) => setSelectedPlace(place)}
-                isLoaded={isLoaded}
-              />
-            </AutoCompleteContainer>
-            <TypoContainer>{t("SearchOU")}</TypoContainer>
-            <ButtonContainer>
-              <PrimaryButton
-                title={t("SearchButtonTitle")}
-                startIcon={
-                  <IconHolder icon={Crosshair.src} width={20} height={20} />
-                }
-                handleClick={() => handleButtonLocationClick()}
-              />
-            </ButtonContainer>
-          </SeachLabelContiner>
-        </SearchContainer>
-        <MapContainer>
-          <Map
-            isLocation={isLocation}
-            setIsLocation={setIsLocation}
-            selectedPlace={selectedPlace}
-            setSelectedPlace={setSelectedPlace}
-            isLoaded={isLoaded}
+    <>
+      <BoxLng>
+        <span>
+          <Switcher path="/prod/boutique/mobile" />
+        </span>
+      </BoxLng>
+      <PageContainer>
+        <Back lng={lng} />
+        <BodyContainerElig>
+          <TiltlesCentred
+            title={t("EligHeaderTitle")}
+            subtitle={t("EligHeaderSubtitle")}
           />
-        </MapContainer>
-      </BodyContainerElig>
-    </PageContainer>
+          <SearchContainer>
+            <SeachTitle>{t("SearchTitle")}</SeachTitle>
+            <SeachLabelContiner>
+              <AutoCompleteContainer>
+                <PlacesAutoComplete
+                  lng={lng}
+                  onSelectPlace={(place) => setSelectedPlace(place)}
+                  isLoaded={isLoaded}
+                />
+              </AutoCompleteContainer>
+              <TypoContainer>{t("SearchOU")}</TypoContainer>
+              <ButtonContainer>
+                <PrimaryButton
+                  title={t("SearchButtonTitle")}
+                  startIcon={
+                    <IconHolder icon={Crosshair.src} width={20} height={20} />
+                  }
+                  handleClick={() => handleButtonLocationClick()}
+                />
+              </ButtonContainer>
+            </SeachLabelContiner>
+          </SearchContainer>
+          <MapContainer>
+            <Map
+              isLocation={isLocation}
+              setIsLocation={setIsLocation}
+              selectedPlace={selectedPlace}
+              setSelectedPlace={setSelectedPlace}
+              isLoaded={isLoaded}
+            />
+          </MapContainer>
+        </BodyContainerElig>
+      </PageContainer>
+    </>
   );
 }
 

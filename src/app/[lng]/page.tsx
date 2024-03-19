@@ -11,9 +11,12 @@ export default async function Home({
 }) {
   const { t } = await useTranslation(lng, "mobile");
   return (
+   
     <Box sx={{ textAlign: "center" }}>
       <Typography variant="h5">Landing Page /prod</Typography>
       <Link href="/prod/boutique/mobile">MOBILE</Link>
     </Box>
+  
   );
+  
 }

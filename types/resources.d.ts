@@ -6,19 +6,20 @@ interface Resources {
   common: {
     ButtonTitle: string;
     ButtonTitlePrimary: string;
-    ButtonTitleOutlined: string;
     MoreDetails: string;
     LessDetails: string;
     DetailsDes: string;
   };
   ftth: {
+    HeaderTitle: string;
+    HeaderSubtitle: string;
     EligHeaderTitle: string;
     EligHeaderSubtitle: string;
     SearchTitle: string;
-    SearchLabel:string;
+    SearchLabel: string;
     SearchButtonTitle: string;
     SearchOU: string;
-  NoSearchResult:string;
+    NoSearchResult: string;
   };
 }
 

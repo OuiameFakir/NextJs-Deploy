@@ -1,9 +1,12 @@
 {
+  "HeaderTitle": "Business Connect Fibre",
+  "HeaderSubtitle": "Toute la puissance de l’internet haut débit au service des professionnels !",
+
   "EligHeaderTitle": "Test d'éligibilité fibre",
   "EligHeaderSubtitle": "Vérifiez si la fibre est disponible chez vous !",
   "SearchTitle": "Cherchez une adresse ou un lieu proche de vous :",
   "SearchLabel": "Saisir une adresse, rue, boulevard ...",
   "SearchButtonTitle": " Localisation automatique",
   "SearchOU": "OU",
-  "NoSearchResult":"Pas de Résultat"
+  "NoSearchResult": "Pas de Résultat"
 }

@@ -45,22 +45,14 @@ export const PrimaryButton = styled(
   gap: "0.5rem",
   borderRadius: "0.5rem",
   width: "100%",
+  textTransform: "none",
+  fontFamily: `${theme.typography.fontFamily}`,
+  fontSize: "0.8rem",
   "&:hover": {
     backgroundColor: theme.palette.customColors.inwi[500],
   },
 }));
 
-export const OutlinedButton = styled((props: PrimaryButtonProps) => (
-  <PrimaryButton {...props} />
-))(() => ({
-  color: theme.palette.customColors.purple[500],
-  backgroundColor: theme.palette.customColors.main,
-  border: `1px solid ${theme.palette.customColors.purple[500]} `,
-  boxShadow: "none",
-  "&:hover": {
-    backgroundColor: theme.palette.customColors.main,
-  },
-}));
 export const AddressButton = styled((props: PrimaryButtonProps) => (
   <PrimaryButton {...props} />
 ))(() => ({

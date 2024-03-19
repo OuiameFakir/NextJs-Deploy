@@ -1,14 +1,19 @@
 // "use client";
 
-import { OutlinedButton, PrimaryButton } from "../../Button/Button";
+import { replace } from "lodash";
+import { PrimaryButton } from "../../Button/Button";
 import { PackageCardFooterContainer } from "./PackageCardFooter.style";
 import { useTranslation } from "@/app/i18n/client";
 function PackageCardFooter({ lng }: { lng: string }) {
   const { t } = useTranslation(lng, "common");
   return (
     <PackageCardFooterContainer>
-      <PrimaryButton title={t("ButtonTitlePrimary")} />
-      <OutlinedButton title={t("ButtonTitleOutlined")} />
+      <PrimaryButton
+        title={t("ButtonTitlePrimary")}
+        handleClick={() =>
+          window.location.replace("/prod/boutique/mobile/elig")
+        }
+      />
     </PackageCardFooterContainer>
   );
 }

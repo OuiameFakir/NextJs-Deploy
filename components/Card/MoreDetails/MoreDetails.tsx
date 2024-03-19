@@ -38,9 +38,7 @@ export const MoreDetails: React.FC<MoreDetailsProps> = ({
         onChange={() => setIsExpanded(!isExpanded)}
       >
         <AccordionSummary
-          expandIcon={
-            <Image src={imgCaret} alt="imgCaret"  />
-          }
+          expandIcon={<Image src={imgCaret} alt="imgCaret" />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
@@ -92,12 +90,12 @@ export const MoreDetails: React.FC<MoreDetailsProps> = ({
               />
               <DetailWithSupportingText
                 title="Mise à disposition"
-                titleLeft={`${offerMobileDataItem.fees.provisionFees}`}
+                titleLeft={`${offerMobileDataItem.fees.provisionFees} dh TTC`}
                 icon={offerMobileDataItem.fees.icon}
               />
               <DetailWithSupportingText
                 title="Installation"
-                titleLeft={`${offerMobileDataItem.fees.installationFees}`}
+                titleLeft={`${offerMobileDataItem.fees.installationFees} dh TTC`}
                 icon={offerMobileDataItem.fees.icon}
               />
             </DetailsFees>

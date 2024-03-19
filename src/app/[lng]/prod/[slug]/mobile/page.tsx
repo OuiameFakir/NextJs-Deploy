@@ -1,44 +1,47 @@
+"use client";
 import React from "react";
-
-import img from "../../../../../../_assets/images/image 3.png";
-
-import { useTranslation } from "@/app/i18n";
-
+import ftthImg from "../../../../../../_assets/svgs/FTTH.svg";
+import { useTranslation } from "@/app/i18n/client";
 import Back from "../../../../../../components/Back/Back";
 import Switcher from "@/app/[lng]/components/Swithcher/Switcher";
 import { offerMobileData } from "../../../../../../_assets/Data/DataCatalog";
-import PageContainer from "../../../../../../components/PageContainer";
 import PageHeader from "../../../../../../components/pageHeader";
 import BodyContainer from "../../../../../../components/BodyContainer";
 import PackageCard from "../../../../../../components/PackageCard";
-import Link from "next/link";
+import {
+  BoxLng,
+  PageContainer,
+} from "../../../../../../components/PageContainer.style";
+import IconHolder from "../../../../../../components/Icons/icon";
+import Inwi from "../../../../../../_assets/svgs/inwi.svg";
 
-async function Mobile({ params: { lng } }: { params: { lng: string } }) {
-  const { t } = await useTranslation(lng, "mobile");
+function Mobile({ params: { lng } }: { params: { lng: string } }) {
+  const { t } = useTranslation(lng, "ftth");
   return (
-    <PageContainer>
-      <span>
-        <Switcher path="/prod/boutique/mobile" />
-      </span>
-      <Back lng={lng} />
-
-      <PageHeader
-        title={t("HeaderTitle")}
-        subtitle={t("HeaderSubtitle")}
-        bannerImg={img}
-      />
-
-      <BodyContainer>
-        {offerMobileData.map(
-          (item, index) => (
-            // index != 0 && (
+    <>
+      <BoxLng>
+        <IconHolder width={93} height={22} icon={Inwi} />
+        <span>
+          <Switcher path="/prod/boutique/mobile" />
+        </span>
+      </BoxLng>
+      <PageContainer>
+        <Back lng={lng} />
+        <PageHeader
+          title={t("HeaderTitle")}
+          subtitle={t("HeaderSubtitle")}
+          bannerImg={ftthImg}
+        />
+        <BodyContainer>
+          {/* {offerMobileData.map((item) => (
             <PackageCard offerMobileDataItem={item} key={item.id} lng={lng} />
-          )
-          // )
-        )}
-      </BodyContainer>
-      <Link href="/prod/boutique/mobile/elig">Eligibility</Link>
-    </PageContainer>
+          ))} */}
+          {offerMobileData.map((item) => (
+            <PackageCard offerMobileDataItem={item} key={item.id} lng={lng} />
+          ))}
+        </BodyContainer>
+      </PageContainer>
+    </>
   );
 }
 

@@ -45,6 +45,9 @@ declare module "@mui/material/styles" {
 }
 
 const theme = createTheme({
+  typography: {
+    fontFamily: "Omnes, sans-serif",
+  },
   palette: {
     customColors: {
       main: "#FFFFFF",
@@ -83,9 +86,6 @@ const theme = createTheme({
         },
       },
     },
-  },
-  typography: {
-    fontFamily: "Omnes",
   },
   components: {
     MuiLink: {
@@ -131,12 +131,6 @@ const theme = createTheme({
       defaultProps: {
         disableRipple: true,
       },
-      // defaultProps: {
-      //   disableRipple: true,
-      //   disableFocusRipple: true,
-      //   disableElevation: true,
-      //   disableTouchRipple: true,
-      // },
     },
   },
   breakpoints: {

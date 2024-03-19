@@ -7,3 +7,4 @@ export { default as equipement } from "./Eqipement.svg";
 export { default as satisfaction } from "./Satifaction.svg";
 export { default as share } from "./Share.svg";
 export { default as pin } from "./Pin.svg";
+export { default as phoneCall } from "./PhoneCall.svg";

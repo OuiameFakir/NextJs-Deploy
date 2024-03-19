@@ -45,8 +45,6 @@ const Map: React.FC<IMapProps> = ({
 
   // Raduis of the circle
   const radiusCircle = 120;
-  // const ConditionToVerify = true;
-  const [conditionToVerify, setConditionToVerify] = useState(false);
 
   // Map Options
   const mapOptions = useMemo<google.maps.MapOptions>(
@@ -76,12 +74,6 @@ const Map: React.FC<IMapProps> = ({
       setCursorPosition,
       setIsLocation,
     });
-    setTimeout(() => {
-      setConditionToVerify(true);
-    });
-    setTimeout(() => {
-      setConditionToVerify(false);
-    }, 1000);
   }
 
   //  Set the map Focus on the Selected Place
@@ -92,12 +84,6 @@ const Map: React.FC<IMapProps> = ({
       selectedPlace,
       setSelectedPlace,
     });
-    setTimeout(() => {
-      setConditionToVerify(true);
-    });
-    setTimeout(() => {
-      setConditionToVerify(false);
-    }, 1000);
   }
   // Handle Marker on click
   const handleMarkerClick = (marker: IMarkerProps) => {
@@ -135,41 +121,6 @@ const Map: React.FC<IMapProps> = ({
         });
       }}
     >
-      {/* <div style={{ position: "absolute", background: "red", height: "10rem" }}>
-        hi
-      </div> */}
-      {conditionToVerify && (
-        <div
-          style={{
-            position: "absolute",
-            display: "flex",
-            background: `${theme.palette.customColors.purple[600]}`,
-            color: "white",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "18.06rem",
-            height: "2.5rem",
-            padding: "0.5rem 1rem",
-            borderRadius: "6.25rem",
-            border: "0.063rem",
-            gap: "0.5rem",
-            fontFamily: "Omnes",
-            fontSize: "1rem",
-            fontWeight: 500,
-            lineHeight: "1.5rem",
-            textAlign: "center",
-          }}
-        >
-          <IconHolder height={20} width={20} icon={Loader.src}></IconHolder>
-          {/* <img
-            src={Loader.src}
-            alt="LoaderIcon"
-            style={{ width: "1.25rem", height: "1.25rem" }}
-          /> */}
-          Récupération de votre position ...
-        </div>
-      )}
       {getDisplayedMarkers({ cursorPosition, radiusCircle, markerData }).map(
         (marker: IMarkerProps) => (
           <MarkerF

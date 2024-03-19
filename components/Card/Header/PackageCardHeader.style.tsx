@@ -19,13 +19,15 @@ export const OfferName = styled(Box)(() => ({
 }));
 export const Price = styled(Box)(() => ({
   display: "flex ",
+  fontFamily: `${theme.typography.fontFamily}`,
   flexDirection: "column",
   alignItems: "flex-end",
   gap: "-0.375rem",
 }));
 export const Title = styled(Typography)(() => ({
   color: `${theme.palette.customColors?.main}`,
-  fontSize: "1.25rem",
+  fontFamily: `${theme.typography.fontFamily}`,
+  fontSize: "1.1rem",
   fontWeight: " 600",
   lineHeight: " 150%",
   // fontSize responsive
@@ -33,11 +35,12 @@ export const Title = styled(Typography)(() => ({
     fontSize: "1.2rem",
   },
   [theme.breakpoints.between("md", "xl_lg")]: {
-    fontSize: "1.2rem",
+    fontSize: "1.1rem",
   },
 }));
 export const Subtitle = styled(Typography)(() => ({
   color: `${theme.palette.customColors?.purple[100]}`,
+  fontFamily: `${theme.typography.fontFamily}`,
   fontSize: "1.5rem",
   fontWeight: "600",
   lineHeight: " 150%",
@@ -46,21 +49,21 @@ export const Subtitle = styled(Typography)(() => ({
     fontSize: "1.25rem",
   },
   [theme.breakpoints.between("md", "xl_lg")]: {
-    fontSize: "1.25rem",
+    fontSize: "1.1rem",
   },
 }));
 export const NumericalValue = styled(Typography)(() => ({
   color: `${theme.palette.customColors?.purple[100]}`,
   textAlign: "right",
-  fontSize: "2.25rem",
+  fontSize: "1.75rem",
   fontWeight: "600 ",
   lineHeight: "150%",
   // fontSize responsive
   [theme.breakpoints.down("md")]: {
-    fontSize: "2.1rem",
+    fontSize: "2rem",
   },
   [theme.breakpoints.between("md", "xl_lg")]: {
-    fontSize: "2.1rem",
+    fontSize: "1.75rem",
   },
 }));
 export const Currency = styled(Typography)(() => ({
