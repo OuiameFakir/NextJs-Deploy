@@ -11,15 +11,59 @@ interface Resources {
     DetailsDes: string;
   };
   ftth: {
-    HeaderTitle: string;
-    HeaderSubtitle: string;
-    EligHeaderTitle: string;
-    EligHeaderSubtitle: string;
-    SearchTitle: string;
-    SearchLabel: string;
-    SearchButtonTitle: string;
-    SearchOU: string;
-    NoSearchResult: string;
+    Header: {
+      Title: string;
+      Subtitle: string;
+    };
+    Eligibility: {
+      Title: string;
+      Subtitle: string;
+      SearchTitle: string;
+      SearchLabel: string;
+      SearchButtonTitle: string;
+      SearchOU: string;
+      NoSearchResult: string;
+    };
+    card: {
+      productName: "Business Connect Fibre";
+      subTitle: "20 Méga";
+      options: {
+        title: "Adresse IP fixe";
+        value: "+20 dh TTC/mois";
+      };
+      attributes: [
+        {
+          title: string;
+          description: string;
+          value: string;
+        },
+        {
+          title: string;
+          description: string;
+          value: string;
+        },
+        {
+          title: string;
+          description: string;
+          value: string;
+        },
+        {
+          title: string;
+          description: string;
+          value: string;
+        },
+        {
+          title: string;
+          description: string;
+          value: string;
+        },
+        {
+          title: string;
+          description: string;
+          value: string;
+        }
+      ];
+    };
   };
 }
 

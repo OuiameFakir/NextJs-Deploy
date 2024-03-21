@@ -60,7 +60,7 @@ export default function PlacesAutoComplete({
       includeInputInList
       filterSelectedOptions
       value={value}
-      noOptionsText={t("NoSearchResult")}
+      noOptionsText={t("Eligibility.NoSearchResult")}
       onChange={(event: any, newValue: IPlaceType | null) => {
         setOptions(newValue ? [newValue, ...options] : options);
         setValue(newValue);
@@ -74,7 +74,7 @@ export default function PlacesAutoComplete({
       renderInput={(params) => (
         <TextField
           {...params}
-          label={t("SearchLabel")}
+          label={t("Eligibility.SearchLabel")}
           InputProps={{
             ...params.InputProps,
             endAdornment: null,

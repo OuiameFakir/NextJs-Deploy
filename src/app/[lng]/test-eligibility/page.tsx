@@ -1,18 +1,18 @@
 "use client";
-import Map from "../../../../../../../components/Map/map";
-import Crosshair from "../../../../../../../_assets/images/Crosshair.png";
+import Map from "../../../../components/Map/map";
+import Crosshair from "../../../../_assets/images/Crosshair.png";
 
 import { useMemo, useState } from "react";
 import { useTranslation } from "@/app/i18n/client";
 
 import { Libraries, useLoadScript } from "@react-google-maps/api";
 import Switcher from "@/app/[lng]/components/Swithcher/Switcher";
-import Back from "../../../../../../../components/Back/Back";
+import Back from "../../../../components/Back/Back";
 import {
   BodyContainerElig,
   MapContainer,
-} from "../../../../../../../components/Elig/elig.style";
-import { TiltlesCentred } from "../../../../../../../components/Titles/Titles";
+} from "../../../../components/Elig/elig.style";
+import { TiltlesCentred } from "../../../../components/Titles/Titles";
 import {
   AutoCompleteContainer,
   ButtonContainer,
@@ -21,15 +21,15 @@ import {
   SearchContainer,
   TypoContainer,
 } from "@/app/[lng]/components/Search/SearchComponent.style";
-import PlacesAutoComplete from "../../../../../../../components/Map/autoComplete";
-import { PrimaryButton } from "../../../../../../../components/Button/Button";
-import IconHolder from "../../../../../../../components/Icons/icon";
+import PlacesAutoComplete from "../../../../components/Map/autoComplete";
+import { PrimaryButton } from "../../../../components/Button/Button";
+import IconHolder from "../../../../components/Icons/icon";
 import {
   BoxLng,
   PageContainer,
-} from "../../../../../../../components/PageContainer.style";
+} from "../../../../components/PageContainer.style";
 
-function Elig({ params: { lng } }: { params: { lng: string } }) {
+function Eligibitlity({ params: { lng } }: { params: { lng: string } }) {
   const { t } = useTranslation(lng, "ftth");
   const [isLocation, setIsLocation] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState(null);
@@ -55,11 +55,11 @@ function Elig({ params: { lng } }: { params: { lng: string } }) {
         <Back lng={lng} />
         <BodyContainerElig>
           <TiltlesCentred
-            title={t("EligHeaderTitle")}
-            subtitle={t("EligHeaderSubtitle")}
+            title={t("Eligibility.Title")}
+            subtitle={t("Eligibility.Subtitle")}
           />
           <SearchContainer>
-            <SeachTitle>{t("SearchTitle")}</SeachTitle>
+            <SeachTitle>{t("Eligibility.SearchTitle")}</SeachTitle>
             <SeachLabelContiner>
               <AutoCompleteContainer>
                 <PlacesAutoComplete
@@ -68,10 +68,10 @@ function Elig({ params: { lng } }: { params: { lng: string } }) {
                   isLoaded={isLoaded}
                 />
               </AutoCompleteContainer>
-              <TypoContainer>{t("SearchOU")}</TypoContainer>
+              <TypoContainer>{t("Eligibility.SearchOU")}</TypoContainer>
               <ButtonContainer>
                 <PrimaryButton
-                  title={t("SearchButtonTitle")}
+                  title={t("Eligibility.SearchButtonTitle")}
                   startIcon={
                     <IconHolder icon={Crosshair.src} width={20} height={20} />
                   }
@@ -95,4 +95,4 @@ function Elig({ params: { lng } }: { params: { lng: string } }) {
   );
 }
 
-export default Elig;
+export default Eligibitlity;

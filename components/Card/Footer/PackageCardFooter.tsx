@@ -10,9 +10,7 @@ function PackageCardFooter({ lng }: { lng: string }) {
     <PackageCardFooterContainer>
       <PrimaryButton
         title={t("ButtonTitlePrimary")}
-        handleClick={() =>
-          window.location.replace("/prod/boutique/mobile/elig")
-        }
+        handleClick={() => window.location.replace("/test-eligibility")}
       />
     </PackageCardFooterContainer>
   );
