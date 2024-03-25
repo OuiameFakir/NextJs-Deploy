@@ -9,6 +9,13 @@ interface Resources {
     MoreDetails: string;
     LessDetails: string;
     DetailsDes: string;
+    Options: string;
+    Fees: string;
+    From: string;
+    Commissioning: string;
+    Provision: string;
+    Installation: string;
+    "dh TTC": string;
   };
   ftth: {
     Header: {

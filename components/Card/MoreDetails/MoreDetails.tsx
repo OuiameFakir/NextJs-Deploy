@@ -66,7 +66,7 @@ export const MoreDetails: React.FC<MoreDetailsProps> = ({
             (option, index) =>
               option.enabled == true && (
                 <DetailsOptions key={index}>
-                  <Title1>Options</Title1>
+                  <Title1>{t("Options")}</Title1>
                   <DetailWithSupportingText
                     title={option.title}
                     titleLeft={option.value}
@@ -80,22 +80,28 @@ export const MoreDetails: React.FC<MoreDetailsProps> = ({
           {offerMobileDataItem.fees?.principal == true && (
             <DetailsFees>
               <FeesTitles>
-                <Title1>Frais</Title1>
-                <Sub1>à partir de</Sub1>
+                <Title1>{t("Fees")}</Title1>
+                <Sub1>{t("From")}</Sub1>
               </FeesTitles>
               <DetailWithSupportingText
-                title="Mise en service"
-                titleLeft={`${offerMobileDataItem.fees.commissioningFees} dh TTC`}
+                title={t("Commissioning")}
+                titleLeft={`${offerMobileDataItem.fees.commissioningFees} ${t(
+                  "dh TTC"
+                )}`}
                 icon={offerMobileDataItem.fees.icon}
               />
               <DetailWithSupportingText
-                title="Mise à disposition"
-                titleLeft={`${offerMobileDataItem.fees.provisionFees} dh TTC`}
+                title={t("Provision")}
+                titleLeft={`${offerMobileDataItem.fees.provisionFees} ${t(
+                  "dh TTC"
+                )}`}
                 icon={offerMobileDataItem.fees.icon}
               />
               <DetailWithSupportingText
-                title="Installation"
-                titleLeft={`${offerMobileDataItem.fees.installationFees} dh TTC`}
+                title={t("Installation")}
+                titleLeft={`${offerMobileDataItem.fees.installationFees} ${t(
+                  "dh TTC"
+                )}`}
                 icon={offerMobileDataItem.fees.icon}
               />
             </DetailsFees>
