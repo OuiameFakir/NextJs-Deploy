@@ -29,11 +29,11 @@ export const DetailTitles = styled(Typography)(() => ({
 export const TitleLeft = styled(Typography)(() => ({
   color: `${theme.palette.customColors.inwi[500]}`,
   textAlign: "right",
-  fontSize: "1.125rem",
+  fontSize: "1rem",
   fontWeight: "600",
   lineHeight: "150%",
-  [theme.breakpoints.down("md")]: {
-    fontSize: "1.05rem",
+  [theme.breakpoints.between("md", "xl_lg")]: {
+    fontSize: "0.9rem",
   },
 }));
 export const DetailWithSupportingTextContainer = styled(Box)(() => ({

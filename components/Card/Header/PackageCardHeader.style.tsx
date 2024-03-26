@@ -10,6 +10,8 @@ export const CardHeaderContainer = styled(Box)(() => ({
   alignItems: "center",
   alignSelf: "stretch",
   background: `${theme.palette.customColors?.purple[600]}`,
+  borderStartStartRadius: "0.75rem",
+  borderStartEndRadius: "0.75rem",
 }));
 export const OfferName = styled(Box)(() => ({
   display: "flex",
@@ -31,8 +33,8 @@ export const Title = styled(Typography)(() => ({
   fontWeight: " 600",
   lineHeight: " 150%",
   // fontSize responsive
-  [theme.breakpoints.down("md")]: {
-    fontSize: "1.2rem",
+  [theme.breakpoints.down("xs")]: {
+    fontSize: "1.5rem",
   },
   [theme.breakpoints.between("md", "xl_lg")]: {
     fontSize: "1.1rem",
@@ -41,15 +43,15 @@ export const Title = styled(Typography)(() => ({
 export const Subtitle = styled(Typography)(() => ({
   color: `${theme.palette.customColors?.purple[100]}`,
   fontFamily: `${theme.typography.fontFamily}`,
-  fontSize: "1.5rem",
+  fontSize: "1.2rem",
   fontWeight: "600",
   lineHeight: " 150%",
   // fontSize responsive
-  [theme.breakpoints.down("md")]: {
-    fontSize: "1.25rem",
+  [theme.breakpoints.down("xs")]: {
+    fontSize: "1.2rem",
   },
   [theme.breakpoints.between("md", "xl_lg")]: {
-    fontSize: "1.1rem",
+    fontSize: "1rem",
   },
 }));
 export const NumericalValue = styled(Typography)(() => ({
@@ -59,24 +61,21 @@ export const NumericalValue = styled(Typography)(() => ({
   fontWeight: "600 ",
   lineHeight: "150%",
   // fontSize responsive
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("xs")]: {
     fontSize: "2rem",
   },
   [theme.breakpoints.between("md", "xl_lg")]: {
-    fontSize: "1.75rem",
+    fontSize: "1.3rem",
   },
 }));
 export const Currency = styled(Typography)(() => ({
   color: `${theme.palette.customColors?.purple[100]}`,
   textAlign: "right",
-  fontSize: "0.875rem",
+  fontSize: "0.8rem",
   fontWeight: "500",
   lineHeight: "150%",
   // fontSize responsive
-  [theme.breakpoints.down("md")]: {
-    fontSize: "0.8rem",
-  },
   [theme.breakpoints.between("md", "xl_lg")]: {
-    fontSize: "0.8rem",
+    fontSize: "0.7rem",
   },
 }));

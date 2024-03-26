@@ -11,10 +11,13 @@ export const SearchContainer = styled(Box)(() => ({
   gap: "1rem",
 }));
 export const SeachTitle = styled(Typography)(() => ({
-  fontSize: "1.125rem",
+  fontSize: "1.12rem",
   fontWeight: "600",
   lineHeight: "1.6875rem",
   color: `${theme.palette.customColors.purple[500]}`,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1rem",
+  },
 }));
 export const SeachLabelContiner = styled(Box)(() => ({
   display: "flex",

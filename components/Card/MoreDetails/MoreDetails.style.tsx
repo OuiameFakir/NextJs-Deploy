@@ -27,13 +27,10 @@ export const AccordionStyled = styled(Accordion)(() => ({
 }));
 export const MoreDetailsTypo = styled(Typography)(() => ({
   color: `${theme.palette.customColors.gray[900]}`,
-  fontSize: "1rem",
+  fontSize: "0.9rem",
   fontStyle: "normal",
   fontWeight: "500",
   lineHeight: "150%",
-  [theme.breakpoints.down("md")]: {
-    fontSize: "0.9rem",
-  },
 }));
 export const AccordDetails = styled(AccordionDetails)(() => ({
   display: "flex",

@@ -1,7 +1,6 @@
 "use client";
 import { MoreDetails } from "./Card/MoreDetails/MoreDetails";
 import { PackageCardContainer } from "./PackageCard.style";
-import PackageCardDisclaimer from "./Card/Disclaimer/PackageCardDisclaimer";
 import PackageCardFooter from "./Card/Footer/PackageCardFooter";
 import PackageCardHeader from "./Card/Header/PackageCardHeader";
 import PackageCardDetails from "./Card/PackageCardDetails/PackageCardDetails";
@@ -21,7 +20,6 @@ const PackageCard: React.FC<PackageCardProps> = ({
         headerSub={offerMobileDataItem.subTitle}
         price={offerMobileDataItem.price}
       />
-      <PackageCardDisclaimer />
       <PackageCardDetails offerMobileDataItem={offerMobileDataItem} />
       <MoreDetails offerMobileDataItem={offerMobileDataItem} lng={lng} />
       <PackageCardFooter lng={lng} />
