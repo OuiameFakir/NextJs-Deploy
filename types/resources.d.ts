@@ -1,8 +1,4 @@
 interface Resources {
-  mobile: {
-    HeaderTitle: string;
-    HeaderSubtitle: string;
-  };
   common: {
     ButtonTitle: string;
     ButtonTitlePrimary: string;
