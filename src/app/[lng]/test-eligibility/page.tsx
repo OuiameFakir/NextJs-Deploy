@@ -28,6 +28,7 @@ import {
   BoxLng,
   PageContainer,
 } from "../../../../components/PageContainer.style";
+import Inwi from "../../../../_assets/svgs/inwi.svg";
 
 function Eligibitlity({ params: { lng } }: { params: { lng: string } }) {
   const { t } = useTranslation(lng, "ftth");
@@ -47,8 +48,9 @@ function Eligibitlity({ params: { lng } }: { params: { lng: string } }) {
   return (
     <>
       <BoxLng>
+        <IconHolder width={93} height={22} icon={Inwi} />
         <span>
-          <Switcher path="/prod/boutique/mobile" />
+          <Switcher path="/" />
         </span>
       </BoxLng>
       <PageContainer>
