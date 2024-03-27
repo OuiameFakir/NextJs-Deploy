@@ -16,13 +16,16 @@ const Switcher = ({ path }: { path?: string }) => {
         <Select
           labelId="Langues"
           id="Langues"
-          value="fr"
+          value="langues"
           label="Langues"
           onChange={(e) => {
             const selectedLanguage = e.target.value;
             window.location.href = `/${selectedLanguage}/${path}`;
           }}
         >
+          <MenuItem value="langues" selected>
+            Langues
+          </MenuItem>
           <MenuItem value="fr" selected>
             Français
           </MenuItem>
